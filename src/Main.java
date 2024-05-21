@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +8,8 @@ public class Main {
 
         int param = sc.nextInt();
 
+
+        Calculable expression = new MultiplyExpression();
         Calculable expression = new AddExpression();
 
         System.out.printf("my expression's result : %d \n", expression.calculate(param));
@@ -18,6 +21,10 @@ interface Calculable {
 }
 
 //본인이 작성한 코드를 붙여넣어주세요!
+class MultiplyExpression implements Calculable{
+    @Override
+    public int calculate(int param) {
+        return param*9;
 class AddExpression implements Calculable{
     @Override
     public int calculate(int param) {
